@@ -44,11 +44,11 @@
                     </ul>
             </li>-->
         </ul><!-- /.nav navbar-nav -->
-        <div class="user role">
-            <?php echo $this->Session->read('Auth.User.Role.name').': &nbsp;'.$this->Session->read('Auth.User.name');?>
-        </div>
         <div class="user dateTopMenu">
             <?php echo date('d/m/Y').'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.date('H:i'); //('Usuario: '.$this->Session->read('Auth.User.name'));?>
         </div>
     </div>
 </nav>
+<div class="user role">
+    <?php echo $this->Session->read('Auth.User.Role.name').': &nbsp;'.$this->Session->read('Auth.User.name');?>
+</div>

@@ -29,7 +29,9 @@
                } else {
                    echo $this->element('menu/top_menu_start'); 
                }?>
+                
             </div>
+            
             <div id="content" class="container">
                 <?php echo $this->Session->flash(); ?>
                 <?php echo $this->fetch('content'); ?>

@@ -1,45 +1,30 @@
-
 <div id="page-container" class="row">
-
-	<div id="sidebar" class="col-sm-3">
-		
-		<div class="actions">
-		
-			<ul class="list-group">
-				<li class="list-group-item"><?php echo $this->Html->link(__('List Chapters'), array('action' => 'index')); ?></li>
-				<li class="list-group-item"><?php echo $this->Html->link(__('List Articles'), array('controller' => 'articles', 'action' => 'index')); ?> </li>
-				<li class="list-group-item"><?php echo $this->Html->link(__('New Article'), array('controller' => 'articles', 'action' => 'add')); ?> </li>
-			</ul><!-- /.list-group -->
-		
-		</div><!-- /.actions -->
-		
-	</div><!-- /#sidebar .col-sm-3 -->
-	
-	<div id="page-content" class="col-sm-9">
-
-		<h2><?php echo __('Add Chapter'); ?></h2>
-
-		<div class="chapters form">
-		
-			<?php echo $this->Form->create('Chapter', array('role' => 'form')); ?>
-
-				<fieldset>
-
-					<div class="form-group">
-						<?php echo $this->Form->input('number', array('class' => 'form-control')); ?>
-					</div><!-- .form-group -->
-					<div class="form-group">
-						<?php echo $this->Form->input('name', array('class' => 'form-control')); ?>
-					</div><!-- .form-group -->
-
-					<?php echo $this->Form->submit('Submit', array('class' => 'btn btn-large btn-primary')); ?>
-
-				</fieldset>
-
-			<?php echo $this->Form->end(); ?>
-
-		</div><!-- /.form -->
-			
-	</div><!-- /#page-content .col-sm-9 -->
-
-</div><!-- /#page-container .row-fluid -->
+    <div id="page-content" class="col-sm-12">
+        <h2><?php echo __('Adicionar Capítulo'); ?></h2>
+        <hr>
+        <div class="chapters form">
+            <?php echo $this->Form->create('Chapter', array('role' => 'form')); ?>
+                <fieldset>
+                    <div class="form-group col-sm-6">
+                        <div class="form-group">
+                            <?php echo $this->Form->input('number', array('label' => 'Número *', 'class' => 'form-control')); ?>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <div class="form-group">
+                            <?php echo $this->Form->input('name', array('label' => 'Nombre *', 'class' => 'form-control')); ?>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <div class="form-group col-sm-3 col-sm-offset-4">
+                            <?php echo $this->Form->submit('Aceptar', array('class' => 'btn btn-large btn-primary')); ?>
+                        </div>   
+                        <div class="form-group col-sm-3" >
+                            <?php echo $this->Html->link('Cancelar','/chapters', array('class' => 'btn btn-large btn-danger')); ?>
+                        </div>     
+                    </div>
+                </fieldset>
+            <?php echo $this->Form->end(); ?>
+        </div>
+    </div>
+</div>

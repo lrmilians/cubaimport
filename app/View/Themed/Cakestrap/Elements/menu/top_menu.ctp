@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
         </button>
-        <?php echo $this->Html->Link('Editorial', '/users/welcome', array('class' => 'navbar-brand')); ?>
+        <?php echo $this->Html->Link('CubaImport', '/users/welcome', array('class' => 'navbar-brand')); ?>
     </div>
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
@@ -44,11 +44,11 @@
                     </ul>
             </li>-->
         </ul><!-- /.nav navbar-nav -->
+        <div class="user role">
+            <?php echo $this->Session->read('Auth.User.name');?>
+        </div>
         <div class="user dateTopMenu">
             <?php echo date('d/m/Y').'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.date('H:i'); //('Usuario: '.$this->Session->read('Auth.User.name'));?>
         </div>
     </div>
 </nav>
-<div class="user role">
-    <?php echo $this->Session->read('Auth.User.Role.name').': &nbsp;'.$this->Session->read('Auth.User.name');?>
-</div>

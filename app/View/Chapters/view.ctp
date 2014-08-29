@@ -24,9 +24,10 @@
                             </tr>					
                         </tbody>
                     </table>
-                    <div class="form-group col-sm-3 col-sm-offset-5">
-                        <?php echo $this->Html->link('Regresar','/chapters', array('class' => 'btn btn-large btn-primary')); ?>
-                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <?php echo $this->Html->link('Regresar','/chapters', array('class' => 'btn btn-large btn-primary')); ?>
                 </div>
             </div>					
             <div class="related">
@@ -37,6 +38,7 @@
                         <table class="table table-striped table-bordered table-hover">
                             <thead>
                                 <tr>
+                                    <th><?php echo __('No'); ?></th>
                                     <th><?php echo __('Nombre'); ?></th>
                                     <th><?php echo __('Cantidad'); ?></th>
                                     <th><?php echo __('Observaciones Cantidad'); ?></th>
@@ -50,25 +52,26 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php $i = 0;
+                            <?php $i = 1;
 				foreach ($chapter['Article'] as $article): ?>
                                     <tr>
+                                        <td><?php echo $i++; ?></td>
                                         <td><?php echo $article['name']; ?></td>
                                         <td><?php echo $article['amount']; ?></td>
                                         <td><?php echo $article['obs_amount']; ?></td>
                                         <td><?php echo $article['value']; ?></td>
                                         <td><?php echo $article['obs_value']; ?></td>
-                                        <td><?php echo $article['Chapter']['name']?></td>
-                                        <td><?php echo $article['MeasureUnit']['name']; ?></td>
+                                        <td><?php echo $chapter['Chapter']['name']?></td>
+                                        <td><?php echo $this->Session->read('MeasureUnits')[$article['measure_unit_id']]; ?></td>
                                         <td><?php echo $article['created']; ?></td>
                                         <td><?php echo $article['modified']; ?></td>
                                         <td class="actions">
                                             <ul class="navigation">
                                                 <li><a href="#"><?php echo $this->Html->image('tools.png')?></a>
                                                     <ul class="level1">
-                                                        <li><?php echo $this->Html->link(__('Ver'), array('action' => 'view', $article['id']), array('class' => 'btn btn-default btn-xs')); ?></li>
-                                                        <li><?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $article['id']), array('class' => 'btn btn-default btn-xs')); ?></li>
-                                                        <li><?php echo $this->Form->postLink(__('Eliminar'), array('action' => 'delete', $article['id']), array('class' => 'btn btn-default btn-xs'), __('Está seguro que desea eliminar el artículo '.$article['name'].' ?', $article['id'])); ?></li>         
+                                                        <li><?php echo $this->Html->link(__('Ver'), array('controller' => 'articles', 'action' => 'view', $article['id']), array('class' => 'btn btn-default btn-xs')); ?></li>
+                                                        <li><?php echo $this->Html->link(__('Editar'), array('controller' => 'articles', 'action' => 'edit', $article['id']), array('class' => 'btn btn-default btn-xs')); ?></li>
+                                                        <li><?php echo $this->Form->postLink(__('Eliminar'), array('controller' => 'articles', 'action' => 'delete', $article['id']), array('class' => 'btn btn-default btn-xs'), __('Está seguro que desea eliminar el artículo '.$article['name'].' ?', $article['id'])); ?></li>         
                                                     </ul>
                                                 </li>
                                             </ul> 

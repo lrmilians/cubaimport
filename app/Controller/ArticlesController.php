@@ -14,8 +14,8 @@ class ArticlesController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Session');
-
+	public $components = array('Paginator', 'Session', 'RequestHandler');
+        public $helpers = array('Js');
 /**
  * index method
  *
@@ -111,4 +111,20 @@ class ArticlesController extends AppController {
 		}
 		$this->Session->setFlash(__('Article was not deleted'), 'flash/error');
 		$this->redirect(array('action' => 'index'));
-	}}
+	}
+        
+        
+        public function find_articles(){
+            if(!empty($this->request->data)){
+                $data = $this->request->data['Article']['name'];
+                $entries = $this->Article->find('all', array('conditions' => array(
+                        "OR" => array('Article.name LIKE' => '%'.$data.'%','Article.description LIKE' => '%'.$data.'%'))));    
+                $this->set('entries', $entries);
+                if($this->RequestHandler->isAjax()){
+                    $this->render('entries', 'ajax');   
+                }
+            }
+        }
+        
+        
+}

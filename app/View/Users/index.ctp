@@ -12,11 +12,6 @@
                         <tr>
                             <th><?php echo $this->Paginator->sort('username', 'Usuario'); ?></th>
                             <th><?php echo $this->Paginator->sort('name', 'Nombre'); ?></th>
-                            <th><?php echo $this->Paginator->sort('email', 'Email'); ?></th>
-                            <th><?php echo $this->Paginator->sort('address', 'Dirección'); ?></th>
-                            <th><?php echo $this->Paginator->sort('ci', 'Cédula'); ?></th>
-                            <th><?php echo $this->Paginator->sort('ruc', 'RUC'); ?></th>
-                            <th><?php echo $this->Paginator->sort('cell', 'Celular'); ?></th>
                             <th><?php echo $this->Paginator->sort('active', 'Activo'); ?></th>
                             <th><?php echo $this->Paginator->sort('role', 'Rol'); ?></th>
                             <th class="actions"><?php echo __('Acciones'); ?></th>  
@@ -27,11 +22,6 @@
                             <tr>
                                 <td><?php echo h($user['User']['username']); ?>&nbsp;</td>
                                 <td><?php echo h($user['User']['name']); ?>&nbsp;</td>
-                                <td><?php echo h($user['User']['email']); ?>&nbsp;</td>
-                                <td><?php echo h($user['User']['address']); ?>&nbsp;</td>
-                                <td><?php echo h($user['User']['ci']); ?>&nbsp;</td>
-                                <td><?php echo h($user['User']['ruc']); ?>&nbsp;</td>
-                                <td><?php echo h($user['User']['cell']); ?>&nbsp;</td>
                                 <td><?php echo h($user['User']['active']); ?>&nbsp;</td>
                                 <td><?php echo h($user['Role']['name']); ?>&nbsp;</td>     
                                 <td class="actions">     

@@ -11,6 +11,10 @@
                             <td><?php echo h($article['Article']['name']); ?>&nbsp;</td>
                         </tr>
                         <tr>
+                            <td><strong><?php echo __('Descripción'); ?></strong></td>
+                            <td><?php echo h($article['Article']['description']); ?>&nbsp;</td>
+                        </tr>
+                        <tr>
                             <td><strong><?php echo __('Cantidad'); ?></strong></td>
                             <td><?php echo h($article['Article']['amount']); ?>&nbsp;</td>
                         </tr>
@@ -34,7 +38,7 @@
                             <td><strong><?php echo __('Unidad Medida'); ?></strong></td>
                             <td><?php echo $this->Html->link($article['MeasureUnit']['name'], array('controller' => 'measure_units', 'action' => 'view', $article['MeasureUnit']['id']), array('class' => '')); ?>&nbsp;</td>
                         </tr>
-                        <tr
+                        <tr>
                             <td><strong><?php echo __('Creado'); ?></strong></td>
                             <td><?php echo h($article['Article']['created']); ?>&nbsp;</td>
                         </tr>

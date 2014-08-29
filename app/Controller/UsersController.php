@@ -4,7 +4,7 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 
     public $components = array('Paginator', 'Session');
-    public $uses = array('User', 'Role');
+    public $uses = array('User', 'Role', 'MeasureUnit');
   
         
     public function beforeFilter() {
@@ -30,6 +30,7 @@ class UsersController extends AppController {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 $this->Session->write('Functionalities', $this->Role->getFunctionalitiesByRole($this->Auth->user('role_id')));
+                $this->Session->write('MeasureUnits', $this->MeasureUnit->find('list'));
                 $this->Session->setFlash(__('Bienvenido, ' . $this->Auth->user('name')), 'flash/success');
                 
                 return $this->redirect($this->Auth->redirect());

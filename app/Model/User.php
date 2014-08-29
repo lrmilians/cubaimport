@@ -50,20 +50,6 @@ class User extends AppModel {
                 'message' => 'Las contraseñas no coinciden.',
             )
         ),
-        'email' => array(
-            'required' => array(
-                'rule' => array('email', true),
-                'message' => 'Por favor, indique un email válido.',
-            ),
-            'unique' => array(
-                'rule' => array('isUniqueEmail'),
-                'message' => 'El email indicado, se encuentra en uso.',
-            ),
-            'between' => array(
-                'rule' => array('between', 6, 60),
-                'message' => 'El email debe tener entre 6 y 60 caracteres.',
-            )
-        ),
         'password_update' => array(
             'min_length' => array(
                 'rule' => array('minLength', '8'),
@@ -99,66 +85,6 @@ class User extends AppModel {
                 'required' => true,
             ),
         ),
-        'address' => array(
-            'notEmpty' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Indique una dirección.',
-                'allowEmpty' => false,
-            ),
-            'between' => array(
-                'rule' => array('between', 10, 250),
-                'required' => true,
-                'message' => 'La dirección debe tener entre 10 to 255 caracteres.',
-            ),
-        ),
-        'ci' => array(
-            'notEmpty' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Indique un número de cédula.',
-                'allowEmpty' => false,
-            ),
-            'numeric' => array(
-                'rule' => array('numeric'),
-                'message' => 'Sólo se aceptan números.',
-            ),
-            'between' => array(
-                'rule' => array('between', 10, 10),
-                'required' => true,
-                'message' => 'La cédula debe tener 10 números.',
-            ),
-            'isCi' => array(
-                'rule' => array('isCi'),
-                'message' => 'Número de cédula no válido.',
-            ),
-            'unique' => array(
-                'rule' => array('isUniqueCi'),
-                'message' => 'El número de cédula ya se encuentra registrado.',
-            ),
-        ),
-        'ruc' => array(
-            'notEmpty' => array(
-                'rule' => array('notEmpty'),
-                'message' => 'Indique un número de RUC.',
-                'allowEmpty' => false,
-            ),
-            'numeric' => array(
-                'rule' => array('numeric'),
-                'message' => 'Sólo se aceptan números.',
-            ),
-            'between' => array(
-                'rule' => array('between', 13, 13),
-                'required' => true,
-                'message' => 'El RUC debe tener 13 números.',
-            ),
-            'isRuc' => array(
-                'rule' => array('isRucNat'),
-                'message' => 'RUC no válido.',
-            ),
-            'unique' => array(
-                'rule' => array('isUniqueRuc'),
-                'message' => 'El número de RUC ya se encuentra registrado.',
-            ),
-        ),
     );
 
     function isUniqueUsername($check) {
@@ -187,84 +113,6 @@ class User extends AppModel {
         }
     }
 
-    function isUniqueCi($check) {
-        $username = $this->find(
-            'first', array(
-                'fields' => array(
-                    'User.id',
-                    'User.ci'
-                ),
-                'conditions' => array(
-                    'User.ci' => $check['ci']
-                )
-            )
-        );
-        if (!empty($username)) {
-            if ($this->data[$this->alias]['id'] == $username['User']['id']) {
-
-                return true;
-            } else {
-
-                return false;
-            }
-        } else {
-
-            return true;
-        }
-    }
-
-    function isUniqueEmail($check) {
-        $email = $this->find(
-            'first', array(
-                'fields' => array(
-                    'User.id',
-                    'User.email'
-                ),
-                'conditions' => array(
-                    'User.email' => $check['email']
-                )
-            )
-        );
-        if (!empty($email)) {
-            if ($this->data[$this->alias]['id'] == $email['User']['id']) {
-
-                return true;
-            } else {
-
-                return false;
-            }
-        } else {
-
-            return true;
-        }
-    }
-
-    function isUniqueRuc($check) {
-        $ruc = $this->find(
-            'first', array(
-                'fields' => array(
-                    'User.id',
-                    'User.ruc'
-                ),
-                'conditions' => array(
-                    'User.ruc' => $check['ruc']
-                )
-            )
-        );
-
-        if (!empty($ruc)) {
-            if ($this->data[$this->alias]['id'] == $ruc['User']['id']) {
-
-                return true;
-            } else {
-
-                return false;
-            }
-        } else {
-
-            return true;
-        }
-    }
 
     public function alphaNumericDashUnderscore($check) {
         $value = array_values($check);

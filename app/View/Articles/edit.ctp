@@ -12,27 +12,30 @@
                     </div>
                     <div class="form-group col-sm-6">
                         <div class="form-group">
+                                <?php echo $this->Form->input('chapter_id', array('label' => 'Capítulo', 'class' => 'form-control')); ?>
+                        </div>
+                        <div class="form-group">
                                 <?php echo $this->Form->input('name', array('label' => 'Artículo *', 'class' => 'form-control')); ?>
                         </div>
+                        <div class="form-group">
+                                <?php echo $this->Form->input('description', array('label' => 'Descripción', 'class' => 'form-control')); ?>
+                        </div>
+                        <div class="form-group">
+                                <?php echo $this->Form->input('measure_unit_id', array('label' => 'U/M', 'class' => 'form-control')); ?>
+                        </div>
+                    </div>
+                    <div class="form-group col-sm-6">
                         <div class="form-group">
                                 <?php echo $this->Form->input('amount', array('label' => 'Cantidad *', 'class' => 'form-control')); ?>
                         </div>
                         <div class="form-group">
                                 <?php echo $this->Form->input('obs_amount', array('label' => 'Observaciones', 'class' => 'form-control')); ?>
                         </div>
-                    </div>
-                    <div class="form-group col-sm-6">
                         <div class="form-group">
                                 <?php echo $this->Form->input('value', array('label' => 'Valor *', 'class' => 'form-control')); ?>
                         </div>
                         <div class="form-group">
                                 <?php echo $this->Form->input('obs_value', array('label' => 'Observaciones *', 'class' => 'form-control')); ?>
-                        </div>
-                        <div class="form-group">
-                                <?php echo $this->Form->input('chapter_id', array('label' => 'Capítulo', 'class' => 'form-control')); ?>
-                        </div>
-                        <div class="form-group">
-                                <?php echo $this->Form->input('measure_unit_id', array('label' => 'U/M', 'class' => 'form-control')); ?>
                         </div>
                     </div>
                     <div class="form-group col-sm-12">

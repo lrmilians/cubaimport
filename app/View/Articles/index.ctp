@@ -10,30 +10,32 @@
 				<table cellpadding="0" cellspacing="0" class="table table-striped table-hover">
                                     <thead>
                                         <tr>
+                                            <th><?php echo $this->Paginator->sort('No.'); ?></th>
                                             <th><?php echo $this->Paginator->sort('Artículo'); ?></th>
                                             <th><?php echo $this->Paginator->sort('Cantidad'); ?></th>
+                                            <th><?php echo $this->Paginator->sort('U/M'); ?></th>
                                             <th><?php echo $this->Paginator->sort('Observaciones'); ?></th>
                                             <th><?php echo $this->Paginator->sort('Valor'); ?></th>
                                             <th><?php echo $this->Paginator->sort('Observaciones'); ?></th>
-                                            <th><?php echo $this->Paginator->sort('Capítulo'); ?></th>
-                                            <th><?php echo $this->Paginator->sort('U/M'); ?></th>
+                                            <th><?php echo $this->Paginator->sort('Capítulo'); ?></th>         
                                             <th class="actions"><?php echo __('Acciones'); ?></th>
                                         </tr>
                                     </thead>
 					<tbody>
-                                            <?php foreach ($articles as $article): ?>
+                                            <?php $i = 1; 
+                                                foreach ($articles as $article): ?>
                                                 <tr>
+                                                    <td><?php echo $i++; ?>&nbsp;</td>
                                                     <td><?php echo h($article['Article']['name']); ?>&nbsp;</td>
                                                     <td><?php echo h($article['Article']['amount']); ?>&nbsp;</td>
+                                                    <td><?php echo $article['MeasureUnit']['name']; ?></td>
                                                     <td><?php echo h($article['Article']['obs_amount']); ?>&nbsp;</td>
                                                     <td><?php echo h($article['Article']['value']); ?>&nbsp;</td>
                                                     <td><?php echo h($article['Article']['obs_value']); ?>&nbsp;</td>
                                                     <td>
                                                         <?php echo $this->Html->link($article['Chapter']['name'], array('controller' => 'chapters', 'action' => 'view', $article['Chapter']['id'])); ?>
                                                     </td>
-                                                    <td>
-                                                        <?php echo $this->Html->link($article['MeasureUnit']['name'], array('controller' => 'measure_units', 'action' => 'view', $article['MeasureUnit']['id'])); ?>
-                                                    </td>
+                                                    
                                                     <td class="actions">
                                                         <ul class="navigation">
                                                             <li><a href="#"><?php echo $this->Html->image('tools.png')?></a>

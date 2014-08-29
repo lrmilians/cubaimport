@@ -1,4 +1,4 @@
-<?php $cakeDescription = __d('cake_dev', 'Editorial Libros'); ?>
+<?php $cakeDescription = __d('cake_dev', 'CubaImport'); ?>
 <?php echo $this->Html->docType('html5'); ?> 
 <html>
     <head>

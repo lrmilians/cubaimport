@@ -13,31 +13,13 @@
                             <?php echo $this->Form->input('name', array('label' => 'Nombre completo *', 'class' => 'form-control')); ?>
                         </div>
                         <div class="form-group">
-                            <?php echo $this->Form->input('ci', array('label' => 'Cédula *', 'class' => 'form-control')); ?>
-                        </div>
-                        <div class="form-group">
-                            <?php echo $this->Form->input('ruc', array('label' => 'RUC *', 'class' => 'form-control')); ?>
-                        </div>
-                        <div class="form-group">
-                            <?php echo $this->Form->input('address', array('label' => 'Dirección *', 'class' => 'form-control')); ?>
-                        </div>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <div class="form-group">
-                            <?php echo $this->Form->input('email', array('label' => 'Correo electrónico *', 'class' => 'form-control')); ?>
-                        </div>
-                        <div class="form-group">
-                            <?php echo $this->Form->input('phone', array('label' => 'Teléfono', 'class' => 'form-control')); ?>
-                        </div>
-                        <div class="form-group">
-                            <?php echo $this->Form->input('cell', array('label' => 'Celular', 'class' => 'form-control')); ?>
-                        </div>
-                        <div class="form-group">
                             <?php echo $this->Form->input('password', array('label' => 'Contraseña *', 'class' => 'form-control')); ?>
                         </div>
                         <div class="form-group">
                             <?php echo $this->Form->input('password_confirm', array('label' => 'Confirmar Contraseña *', 'maxLength' => 255, 'title' => 'Confirm password', 'type' => 'password', 'class' => 'form-control')); ?>
                         </div>
+                    </div>
+                    <div class="form-group col-sm-6">
                         <div class="form-group">
                             <?php  echo $this->Form->input('role_id', array('label' => 'Rol *', 'class' => 'form-control'));?>
                         </div>

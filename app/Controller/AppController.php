@@ -58,7 +58,19 @@ class AppController extends Controller {
 
     
     public function beforeFilter() {
-        $this->Auth->allow('login');
+        $this->Auth->allow('login', 'find_articles', 'download_gazette');
+    }
+    
+    public function download($nameFile, $extensionFile) {
+        $this->viewClass = 'Media';
+        $params = array(
+            'id'        => $nameFile. '.' .$extensionFile,
+            'name'      => $nameFile,
+            'download'  => true,
+            'extension' => $extensionFile,
+            'path'      => APP . 'webroot' . DS . 'files' . DS
+        );
+        $this->set($params);
     }
 
 }

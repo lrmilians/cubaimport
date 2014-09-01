@@ -1,12 +1,18 @@
 <div id="page-container" class="row">
 	<div id="page-content" class="col-sm-12">
 		<div class="articles index">
-			<h2><?php echo __('Artículos'); ?></h2>
-			<hr>
                         <div class="col-sm-12">
+                            <h2 class="col-sm-10"><?php echo __('Artículos'); ?></h2>
                             <h5 class="col-sm-2"><?php echo $this->Html->link(__('Nuevo Artículo'), array('action' => 'add'), array('class' => 'btn btn-large btn-primary'));?></h5>
+                            <hr>
                         </div>
+                        
 			<div class="table-responsive col-sm-12">
+                            <ul class="pagination">
+                                <?php echo $this->Paginator->prev('< ' . __('Anterior'), array('tag' => 'li'), null, array('class' => 'disabled', 'tag' => 'li', 'disabledTag' => 'a'));
+                                      echo $this->Paginator->numbers(array('separator' => '', 'currentTag' => 'a', 'tag' => 'li', 'currentClass' => 'disabled'));
+                                      echo $this->Paginator->next(__('Siguiente') . ' >', array('tag' => 'li'), null, array('class' => 'disabled', 'tag' => 'li', 'disabledTag' => 'a'));?>
+                            </ul>
 				<table cellpadding="0" cellspacing="0" class="table table-striped table-hover">
                                     <thead>
                                         <tr>

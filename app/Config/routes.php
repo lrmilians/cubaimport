@@ -28,6 +28,7 @@
         Router::connect('/login', array('controller' => 'users', 'action' => 'login'));
         Router::connect('/logout', array('controller' => 'users', 'action' => 'logout'));
         Router::connect('/', array('controller' => 'users', 'action' =>'login'));
+        Router::connect('/findarticles', array('controller' => 'articles', 'action' =>'find_articles'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */

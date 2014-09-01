@@ -115,15 +115,32 @@ class ArticlesController extends AppController {
         
         
         public function find_articles(){
+            $chapters = $this->Article->Chapter->find('list');
+            $chapters['0'] = '-Seleccione un Capítulo-';
+            asort($chapters);
+            $this->set(compact('chapters'));
             if(!empty($this->request->data)){
-                $data = $this->request->data['Article']['name'];
+                $nameArticle = $this->request->data['Article']['name'];
+                $idChapter = $this->request->data['Article']['chapter_id'];
+                if ($idChapter == '0') {
+                   $condition = array();  
+                }  else {
+                   $condition = array('Article.chapter_id' => $idChapter); 
+                }
                 $entries = $this->Article->find('all', array('conditions' => array(
-                        "OR" => array('Article.name LIKE' => '%'.$data.'%','Article.description LIKE' => '%'.$data.'%'))));    
+                        "OR" => array('Article.name LIKE' => '%' . $nameArticle . '%', 'Article.description LIKE' => '%' . $nameArticle . '%', 'Article.string_search LIKE' => '%' . $nameArticle . '%'),
+                        "AND" => $condition    
+                        )));    
+                
                 $this->set('entries', $entries);
                 if($this->RequestHandler->isAjax()){
                     $this->render('entries', 'ajax');   
                 }
             }
+        }
+        
+        public function download_gazette() {
+            $this->download('gaceta-oficial-30-20140711', 'pdf');
         }
         
         

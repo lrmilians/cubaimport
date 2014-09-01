@@ -164,3 +164,131 @@ Stack Trace:
 #18 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
 #19 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #20 {main}
+2014-08-31 15:53:15 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-31 15:53:18 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-31 15:53:18 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-31 15:53:18 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-08-31 22:51:56 Error: Fatal Error (4): syntax error, unexpected '!', expecting '(' in [C:\xampp\htdocs\cubaimport\app\View\Articles\entries.ctp, line 6]
+2014-08-31 22:51:56 Error: [FatalErrorException] syntax error, unexpected '!', expecting '('
+Request URL: /cubaimport/articles/find_articles
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-08-31 22:53:24 Error: Fatal Error (4): syntax error, unexpected '!', expecting '(' in [C:\xampp\htdocs\cubaimport\app\View\Articles\entries.ctp, line 6]
+2014-08-31 22:53:24 Error: [FatalErrorException] syntax error, unexpected '!', expecting '('
+Request URL: /cubaimport/articles/find_articles
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 6, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-01 09:45:40 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 09:45:41 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 09:45:41 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 09:45:41 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 10:24:21 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/files/gaceta-aduana.pdf
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 10:31:14 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/files/gaceta-aduana.pdf
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-01 10:31:23 Error: [NotFoundException] The requested file C:\xampp\htdocs\cubaimport\app\C:\xampp\htdocs\cubaimport\app\outside_webroot_dir\filesgaceta-aduana.zip was not found or not readable
+Request URL: /cubaimport/articles/download_file
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\View\MediaView.php(91): CakeResponse->file('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\cubaimport\lib\Cake\Controller\Controller.php(952): MediaView->render(NULL, NULL)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2014-09-01 10:32:16 Error: [NotFoundException] The requested file C:\xampp\htdocs\cubaimport\app\C:\xampp\htdocs\cubaimport\app\webroot_dir\files\gaceta-aduana.pdf was not found or not readable
+Request URL: /cubaimport/articles/download_file
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\View\MediaView.php(91): CakeResponse->file('C:\\xampp\\htdocs...', Array)
+#1 C:\xampp\htdocs\cubaimport\lib\Cake\Controller\Controller.php(952): MediaView->render(NULL, NULL)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(192): Controller->render()
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

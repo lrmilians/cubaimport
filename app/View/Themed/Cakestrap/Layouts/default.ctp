@@ -17,6 +17,7 @@
         echo $this->Html->script('libs/jquery-ui-1.11.0.min');
         echo $this->Html->script('libs/jquery.mjs.nestedSortable');
         echo $this->Html->script('libs/bootstrap.min');
+        echo $this->Html->script('libs/editableJQuery.js');
         echo $this->Html->script('jsCustom.js');
         echo $this->fetch('script');
         ?>

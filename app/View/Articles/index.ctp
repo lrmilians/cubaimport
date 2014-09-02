@@ -18,6 +18,8 @@
                                         <tr>
                                             <th><?php echo $this->Paginator->sort('No.'); ?></th>
                                             <th><?php echo $this->Paginator->sort('Artículo'); ?></th>
+                                            <th><?php echo $this->Paginator->sort('Descripción'); ?></th>
+                                            <th><?php echo $this->Paginator->sort('String Búsqueda'); ?></th>
                                             <th><?php echo $this->Paginator->sort('Cantidad'); ?></th>
                                             <th><?php echo $this->Paginator->sort('U/M'); ?></th>
                                             <th><?php echo $this->Paginator->sort('Observaciones'); ?></th>
@@ -32,8 +34,54 @@
                                                 foreach ($articles as $article): ?>
                                                 <tr>
                                                     <td><?php echo $i++; ?>&nbsp;</td>
-                                                    <td><?php echo h($article['Article']['name']); ?>&nbsp;</td>
-                                                    <td><?php echo h($article['Article']['amount']); ?>&nbsp;</td>
+                                                    <td><?php 
+                                                        echo $this->inPlaceEditing->input('Article', 'name', $article['Article']['id'],
+                                                                array('value' => $article['Article']['name'],
+                                                                      'actionName' => 'in_place_editing',
+                                                                      'type' => 'text',
+                                                                      'cancelText' => 'Cancelar',
+                                                                      'submitText' => 'Salvar',
+                                                                      'toolTip' => 'Click para editar el Nombre',
+                                                                      'containerType' => 'dd'
+                                                                      )
+                                                                );
+                                                    ?>&nbsp;</td>   
+                                                    <td><?php 
+                                                        echo $this->inPlaceEditing->input('Article', 'description', $article['Article']['id'],
+                                                                array('value' => $article['Article']['description'],
+                                                                      'actionName' => 'in_place_editing',
+                                                                      'type' => 'text',
+                                                                      'cancelText' => 'Cancelar',
+                                                                      'submitText' => 'Salvar',
+                                                                      'toolTip' => 'Click para editar la Descripción',
+                                                                      'containerType' => 'dd'
+                                                                      )
+                                                                );
+                                                    ?>&nbsp;</td> 
+                                                    <td><?php 
+                                                        echo $this->inPlaceEditing->input('Article', 'string_search', $article['Article']['id'],
+                                                                array('value' => $article['Article']['string_search'],
+                                                                      'actionName' => 'in_place_editing',
+                                                                      'type' => 'text',
+                                                                      'cancelText' => 'Cancelar',
+                                                                      'submitText' => 'Salvar',
+                                                                      'toolTip' => 'Click para editar la Descripción',
+                                                                      'containerType' => 'dd'
+                                                                      )
+                                                                );
+                                                    ?>&nbsp;</td> 
+                                                    <td><?php 
+                                                        echo $this->inPlaceEditing->input('Article', 'amount', $article['Article']['id'],
+                                                                array('value' => $article['Article']['amount'],
+                                                                      'actionName' => 'in_place_editing',
+                                                                      'type' => 'text',
+                                                                      'cancelText' => 'Cancelar',
+                                                                      'submitText' => 'Salvar',
+                                                                      'toolTip' => 'Click para editar String Búsqueda',
+                                                                      'containerType' => 'dd'
+                                                                      )
+                                                                );
+                                                    ?>&nbsp;</td>
                                                     <td><?php echo $article['MeasureUnit']['name']; ?></td>
                                                     <td><?php echo h($article['Article']['obs_amount']); ?>&nbsp;</td>
                                                     <td><?php echo h($article['Article']['value']); ?>&nbsp;</td>

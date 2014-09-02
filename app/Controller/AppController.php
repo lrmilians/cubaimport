@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Application level Controller
  *
@@ -35,6 +34,7 @@ class AppController extends Controller {
     public $theme = "Cakestrap";
     public $components = array(
         'Session',
+        'RequestHandler',
         'Auth' => array(
             'loginRedirect' => array(
                 'controller' => 'users',
@@ -60,6 +60,14 @@ class AppController extends Controller {
     public function beforeFilter() {
         $this->Auth->allow('login', 'find_articles', 'download_gazette');
     }
+    
+    public function beforeRender() {
+        if($this->RequestHandler->isAjax() || $this->RequestHandler->isXml()) {  
+            Configure::write('debug', 0);
+        }
+    }
+    
+    
     
     public function download($nameFile, $extensionFile) {
         $this->viewClass = 'Media';

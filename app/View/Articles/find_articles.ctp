@@ -1,6 +1,6 @@
 <div id="page-container" class="row">
     <div id="page-content" class="col-sm-12">
-        <h2><?php echo __('Buscar Artículo'); ?></h2>
+        <h2><?php echo __('Buscar Artículo'); echo $this->Html->image('loading.gif', array('id'=>'busy-indicator'));?></h2>
         <hr> 
         <div class="articles form">
              <?php echo $this->Form->create('Article', array('role' => 'form')); ?>
@@ -17,8 +17,8 @@
                 </div>
                 <div class="form-group col-sm-2">
                     <?php echo $this->Js->submit('Buscar', array(
-                        'before'=>$this->Js->get('#checking')->effect('fadeIn'),
-                        'success'=>$this->Js->get('#checking')->effect('fadeOut'),
+                        'before'=> $this->Js->get('#busy-indicator')->effect('fadeIn'),
+                        'success'=> $this->Js->get('#busy-indicator')->effect('fadeOut'),
                         'update'=>'#choose_options',
                         'class' => 'btn btn-large btn-primary')
                         );?> 
@@ -30,7 +30,8 @@
             <?php echo $this->Form->end();?>
         </div>
     </div>
-    <div id="choose_options" class="col-sm-12"></div>
+    <div id="choose_options" class="col-sm-12">
+    </div>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
         <input type="hidden" name="cmd" value="_s-xclick">
         <input type="hidden" name="hosted_button_id" value="4TSA5XDTXKUSG">

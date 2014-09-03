@@ -51,3 +51,4 @@ ol li li li:before {}
 .sortable li.mjs-nestedSortable-leaf div {}
 .sortable li div {cursor: move;margin: 0;padding: -6px;}
 .donate {float: right;margin: 0 12px 0 0;}
+#busy-indicator {display: none; width: 25px; height: 25px; margin: 0 12px;}

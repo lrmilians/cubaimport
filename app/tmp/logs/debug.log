@@ -1,0 +1,44 @@
+2014-09-02 10:44:00 Debug: Notice (8): Undefined variable: updated_value in [C:\xampp\htdocs\cubaimport\app\View\Articles\in_place_editing.ctp, line 1]
+Trace:
+include - APP\View\Articles\in_place_editing.ctp, line 1
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-09-02 10:45:06 Debug: Notice (8): Undefined variable: updated_value in [C:\xampp\htdocs\cubaimport\app\View\Articles\in_place_editing.ctp, line 1]
+Trace:
+include - APP\View\Articles\in_place_editing.ctp, line 1
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-09-02 10:48:41 Debug: Notice (8): Undefined variable: updated_value in [C:\xampp\htdocs\cubaimport\app\View\Articles\in_place_editing.ctp, line 1]
+Trace:
+include - APP\View\Articles\in_place_editing.ctp, line 1
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+
+2014-09-02 10:56:38 Debug: Notice (8): Undefined variable: updated_value in [C:\xampp\htdocs\cubaimport\app\View\Articles\in_place_editing.ctp, line 1]
+Trace:
+include - APP\View\Articles\in_place_editing.ctp, line 1
+View::_evaluate() - CORE\Cake\View\View.php, line 935
+View::_render() - CORE\Cake\View\View.php, line 897
+View::render() - CORE\Cake\View\View.php, line 466
+Controller::render() - CORE\Cake\Controller\Controller.php, line 952
+Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 192
+Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
+[main] - APP\webroot\index.php, line 108
+

@@ -40,8 +40,9 @@
             <div id="footer" class="container"></div>	
         </div>
         <div class="container">
-            <div class="well well-sm">
+            <div class="well well-sm footer">
                 <small><?php echo $this->element('sql_dump'); ?></small>
+                <small>versión 1.0</small>
             </div>
         </div>
         <?php echo $this->Js->writeBuffer();?>

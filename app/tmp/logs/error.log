@@ -4875,3 +4875,59 @@ Stack Trace:
 #3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-09-03 09:56:30 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\cubaimport\app\View\Articles\find_articles.ctp, line 24]
+2014-09-03 09:56:30 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /cubaimport/findarticles
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 24)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 24, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 24, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-03 09:56:30 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-03 09:56:31 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-03 09:56:31 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-03 09:56:31 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-03 09:57:04 Error: Fatal Error (4): syntax error, unexpected ')' in [C:\xampp\htdocs\cubaimport\app\View\Articles\find_articles.ctp, line 25]
+2014-09-03 09:57:04 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /cubaimport/findarticles
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}

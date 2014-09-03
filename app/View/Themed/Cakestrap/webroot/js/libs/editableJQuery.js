@@ -59,8 +59,7 @@
 
 (function($) {
 
-    $.fn.editable = function(target1, options) {        
-        var target = window.location.href + target1.substring(2, target1.length);
+    $.fn.editable = function(target, options) {        
            
         if ('disable' == target) {
             $(this).data('disabled.editable', true);

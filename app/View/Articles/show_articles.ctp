@@ -31,13 +31,15 @@
                                     </thead>
 					<tbody>
                                             <?php $i = 1; 
+                                                $controller = '';    
+                                                if ($this->Paginator->counter(array('format' => ('{:page}'))) == '1') $controller = 'articles/';
                                                 foreach ($articles as $article): ?>
                                                 <tr>
                                                     <td><?php echo $i++; ?>&nbsp;</td>
-                                                    <td><?php 
+                                                    <td><?php  
                                                         echo $this->inPlaceEditing->input('Article', 'name', $article['Article']['id'],
                                                                 array('value' => $article['Article']['name'],
-                                                                      'actionName' => 'in_place_editing',
+                                                                      'actionName' => $controller.'in_place_editing',
                                                                       'type' => 'text',
                                                                       'cancelText' => 'Cancelar',
                                                                       'submitText' => 'Salvar',
@@ -49,7 +51,7 @@
                                                     <td><?php 
                                                         echo $this->inPlaceEditing->input('Article', 'description', $article['Article']['id'],
                                                                 array('value' => $article['Article']['description'],
-                                                                      'actionName' => 'in_place_editing',
+                                                                      'actionName' => $controller.'in_place_editing',
                                                                       'type' => 'text',
                                                                       'cancelText' => 'Cancelar',
                                                                       'submitText' => 'Salvar',
@@ -61,11 +63,11 @@
                                                     <td><?php 
                                                         echo $this->inPlaceEditing->input('Article', 'string_search', $article['Article']['id'],
                                                                 array('value' => $article['Article']['string_search'],
-                                                                      'actionName' => 'in_place_editing',
+                                                                      'actionName' => $controller.'in_place_editing',
                                                                       'type' => 'text',
                                                                       'cancelText' => 'Cancelar',
                                                                       'submitText' => 'Salvar',
-                                                                      'toolTip' => 'Click para editar la Descripción',
+                                                                      'toolTip' => 'Click para editar String Búsqueda',
                                                                       'containerType' => 'dd'
                                                                       )
                                                                 );
@@ -73,11 +75,11 @@
                                                     <td><?php 
                                                         echo $this->inPlaceEditing->input('Article', 'amount', $article['Article']['id'],
                                                                 array('value' => $article['Article']['amount'],
-                                                                      'actionName' => 'in_place_editing',
+                                                                      'actionName' => $controller.'in_place_editing',
                                                                       'type' => 'text',
                                                                       'cancelText' => 'Cancelar',
                                                                       'submitText' => 'Salvar',
-                                                                      'toolTip' => 'Click para editar String Búsqueda',
+                                                                      'toolTip' => 'Click para editar la Cantidad',
                                                                       'containerType' => 'dd'
                                                                       )
                                                                 );

@@ -1,41 +1,16 @@
 <?php
-
 App::uses('AppController', 'Controller');
 
-/**
- * Articles Controller
- *
- * @property Article $Article
- * @property PaginatorComponent $Paginator
- * @property SessionComponent $Session
- */
 class ArticlesController extends AppController {
 
-    /**
-     * Components
-     *
-     * @var array
-     */
     public $components = array('Paginator');
     public $helpers = array('Js', 'InPlaceEditing.InPlaceEditing');
 
-    /**
-     * index method
-     *
-     * @return void
-     */
-    public function index() {
+    public function show_articles() {
         $this->Article->recursive = 0;
         $this->set('articles', $this->paginate());
     }
 
-    /**
-     * view method
-     *
-     * @throws NotFoundException
-     * @param string $id
-     * @return void
-     */
     public function view($id = null) {
         if (!$this->Article->exists($id)) {
             throw new NotFoundException(__('Invalid article'));
@@ -44,11 +19,6 @@ class ArticlesController extends AppController {
         $this->set('article', $this->Article->find('first', $options));
     }
 
-    /**
-     * add method
-     *
-     * @return void
-     */
     public function add() {
         if ($this->request->is('post')) {
             $this->Article->create();
@@ -64,13 +34,6 @@ class ArticlesController extends AppController {
         $this->set(compact('chapters', 'measureUnits'));
     }
 
-    /**
-     * edit method
-     *
-     * @throws NotFoundException
-     * @param string $id
-     * @return void
-     */
     public function edit($id = null) {
         $this->Article->id = $id;
         if (!$this->Article->exists($id)) {
@@ -92,14 +55,6 @@ class ArticlesController extends AppController {
         $this->set(compact('chapters', 'measureUnits'));
     }
 
-    /**
-     * delete method
-     *
-     * @throws NotFoundException
-     * @throws MethodNotAllowedException
-     * @param string $id
-     * @return void
-     */
     public function delete($id = null) {
         if (!$this->request->is('post')) {
             throw new MethodNotAllowedException();
@@ -146,11 +101,31 @@ class ArticlesController extends AppController {
     }
 
     public function in_place_editing($id = null) {
+        if (!$id) {
+            return;
+        }
+        if ($this->request->data) {
+            $enabledFields = array('zip', 'name', 'amount', 'description', 'string_search');
+            foreach ($this->data['Article'] as $field => $value) {
+                if (!in_array($field, $enabledFields)) {
+                    $this->set('updated_value', '');
+                        return;
+                }
+                $this->Article->id = $id;
+                $this->Article->saveField($field, $value);
+                $this->set('updated_value', $value);
+                $this->beforeRender();
+                $this->layout = 'ajax';
+            }
+        }
+    }
+    
+    /*public function in_place_editing($id = null) {
         if (!$id) 
             return;
         if ($this->request->data) {
             foreach ($this->data['Article'] as $field => $value) {
-                switch ($field) {
+               switch ($field) {
                     case 'zip':
                     case 'name':
                         break;
@@ -172,6 +147,6 @@ class ArticlesController extends AppController {
                 $this->layout = 'ajax';
             }
         }
-    }
+    }*/
 
 }

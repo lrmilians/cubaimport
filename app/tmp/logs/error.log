@@ -4675,3 +4675,203 @@ Dispatcher::_invoke() - CORE\Cake\Routing\Dispatcher.php, line 185
 Dispatcher::dispatch() - CORE\Cake\Routing\Dispatcher.php, line 160
 [main] - APP\webroot\index.php, line 108
 
+2014-09-02 16:57:00 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 16:57:00 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 16:57:00 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 16:57:00 Error: [MissingControllerException] Controller class CubaimportController could not be found.
+Exception Attributes: array (
+  'class' => 'CubaimportController',
+  'plugin' => NULL,
+)
+Request URL: /cubaimport/cubaimport/img/favicon.png
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:17:39 Error: [MissingActionException] Action ArticlesController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => 'index',
+)
+Request URL: /cubaimport/articles
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-02 17:18:03 Error: [MissingControllerException] Controller class 1Controller could not be found.
+Exception Attributes: array (
+  'class' => '1Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:18:39 Error: [MissingControllerException] Controller class 1Controller could not be found.
+Exception Attributes: array (
+  'class' => '1Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:21:50 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\xampp\htdocs\cubaimport\app\View\Articles\show_articles.ctp, line 42]
+2014-09-02 17:21:50 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cubaimport/articles/show_articles/page:1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 42, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 42, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-02 17:21:56 Error: Fatal Error (4): syntax error, unexpected '{' in [C:\xampp\htdocs\cubaimport\app\View\Articles\show_articles.ctp, line 42]
+2014-09-02 17:21:56 Error: [FatalErrorException] syntax error, unexpected '{'
+Request URL: /cubaimport/articles/show_articles/
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 42)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 42, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 42, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-02 17:22:53 Error: [MissingActionException] Action ArticlesController::{:page}in_place_editing() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => '{:page}in_place_editing',
+)
+Request URL: /cubaimport/articles/%7B:page%7Din_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-02 17:23:54 Error: [MissingActionException] Action ArticlesController::{:page}in_place_editing() could not be found.
+Exception Attributes: array (
+  'controller' => 'ArticlesController',
+  'action' => '{:page}in_place_editing',
+)
+Request URL: /cubaimport/articles/%7B:page%7Din_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(185): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\htdocs\cubaimport\lib\Cake\Routing\Dispatcher.php(160): Dispatcher->_invoke(Object(ArticlesController), Object(CakeRequest), Object(CakeResponse))
+#2 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2014-09-02 17:24:48 Error: [MissingControllerException] Controller class 7Controller could not be found.
+Exception Attributes: array (
+  'class' => '7Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/7
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:24:55 Error: [MissingControllerException] Controller class 7Controller could not be found.
+Exception Attributes: array (
+  'class' => '7Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/7
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:25:01 Error: [MissingControllerException] Controller class 1Controller could not be found.
+Exception Attributes: array (
+  'class' => '1Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:25:15 Error: [MissingControllerException] Controller class 1Controller could not be found.
+Exception Attributes: array (
+  'class' => '1Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:25:44 Error: [MissingControllerException] Controller class 1Controller could not be found.
+Exception Attributes: array (
+  'class' => '1Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:26:17 Error: [MissingControllerException] Controller class 1Controller could not be found.
+Exception Attributes: array (
+  'class' => '1Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:26:40 Error: [MissingControllerException] Controller class 1Controller could not be found.
+Exception Attributes: array (
+  'class' => '1Controller',
+  'plugin' => 'InPlaceEditing',
+)
+Request URL: /cubaimport/in_place_editing/1
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2014-09-02 17:28:49 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\cubaimport\app\View\Articles\show_articles.ctp, line 34]
+2014-09-02 17:28:49 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /cubaimport/articles/show_articles
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-02 17:29:05 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\cubaimport\app\View\Articles\show_articles.ctp, line 34]
+2014-09-02 17:29:05 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /cubaimport/articles/show_articles
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-02 17:29:56 Error: Fatal Error (4): syntax error, unexpected '=>' (T_DOUBLE_ARROW) in [C:\xampp\htdocs\cubaimport\app\View\Articles\show_articles.ctp, line 40]
+2014-09-02 17:29:56 Error: [FatalErrorException] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+Request URL: /cubaimport/articles/show_articles
+Stack Trace:
+#0 C:\xampp\htdocs\cubaimport\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#2 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(929): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 40, Array)
+#3 C:\xampp\htdocs\cubaimport\lib\Cake\Core\App.php(902): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
